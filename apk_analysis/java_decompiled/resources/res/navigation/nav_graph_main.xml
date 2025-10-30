@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@+id/home">
+    <fragment
+        android:name="com.anilab.android.ui.home.HomeFragment"
+        android:id="@+id/home"/>
+    <fragment
+        android:name="com.anilab.android.ui.releaseCalendar.ReleaseCalendarFragment"
+        android:id="@+id/releaseCalendar"/>
+    <fragment
+        android:name="com.anilab.android.ui.myList.MyListFragment"
+        android:id="@+id/myList"/>
+    <fragment
+        android:name="com.anilab.android.ui.profile.ProfileFragment"
+        android:id="@+id/profile"/>
+</navigation>

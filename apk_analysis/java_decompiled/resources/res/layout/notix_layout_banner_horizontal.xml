@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_banner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="Banner Image"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="12dp">
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/tv_banner_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                style="@style/Notix.Banner.Text.H2"/>
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/tv_banner_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                style="@style/Notix.Banner.Text.H3"/>
+        </LinearLayout>
+        <TextView
+            android:textColor="@color/notix_primary_color"
+            android:id="@+id/tv_banner_ad_label"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_label_text"/>
+    </LinearLayout>
+</merge>

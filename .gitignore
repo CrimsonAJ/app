@@ -79,3 +79,4 @@ agenthub/agents/youtube/db
 # Mobile development
 android-sdk/ jadx/lib/jadx-1.5.0-all.jar
 jadx-1.5.0.zip
+jadx/lib/jadx-1.5.0-all.jar

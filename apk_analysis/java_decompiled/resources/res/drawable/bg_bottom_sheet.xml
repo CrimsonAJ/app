@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/colorStrokeOutlineButton"/>
+            <corners
+                android:topLeftRadius="@dimen/dp_40"
+                android:topRightRadius="@dimen/dp_40"/>
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/dp_1"
+        android:top="@dimen/dp_1"
+        android:right="@dimen/dp_1">
+        <shape>
+            <solid android:color="@color/colorPrimary"/>
+            <corners
+                android:topLeftRadius="@dimen/dp_40"
+                android:topRightRadius="@dimen/dp_40"/>
+        </shape>
+    </item>
+</layer-list>

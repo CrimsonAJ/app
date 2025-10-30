@@ -1,0 +1,82 @@
+package L2;
+
+import C2.O;
+
+/* loaded from: classes.dex */
+public final class t {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final O f4632a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public final G2.b f4633b;
+
+    public t(O settingRepository, G2.b mapper) {
+        kotlin.jvm.internal.h.e(settingRepository, "settingRepository");
+        kotlin.jvm.internal.h.e(mapper, "mapper");
+        this.f4632a = settingRepository;
+        this.f4633b = mapper;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:15:0x0031  */
+    /* JADX WARN: Removed duplicated region for block: B:8:0x0021  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object a(boolean r5, G7.c r6) {
+        /*
+            r4 = this;
+            boolean r0 = r6 instanceof L2.s
+            if (r0 == 0) goto L13
+            r0 = r6
+            L2.s r0 = (L2.s) r0
+            int r1 = r0.f4631u
+            r2 = -2147483648(0xffffffff80000000, float:-0.0)
+            r3 = r1 & r2
+            if (r3 == 0) goto L13
+            int r1 = r1 - r2
+            r0.f4631u = r1
+            goto L18
+        L13:
+            L2.s r0 = new L2.s
+            r0.<init>(r4, r6)
+        L18:
+            java.lang.Object r6 = r0.f4629s
+            F7.a r1 = F7.a.f2587a
+            int r2 = r0.f4631u
+            r3 = 1
+            if (r2 == 0) goto L31
+            if (r2 != r3) goto L29
+            L2.t r5 = r0.f4628r
+            a.AbstractC0485a.A(r6)
+            goto L4d
+        L29:
+            java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
+            java.lang.String r6 = "call to 'resume' before 'invoke' with coroutine"
+            r5.<init>(r6)
+            throw r5
+        L31:
+            a.AbstractC0485a.A(r6)
+            r0.f4628r = r4
+            r0.f4631u = r3
+            C2.O r6 = r4.f4632a
+            r6.getClass()
+            o7.y r2 = E2.d.f1935a
+            C2.N r2 = new C2.N
+            r3 = 0
+            r2.<init>(r5, r6, r3)
+            java.lang.Object r6 = E2.d.a(r2, r0)
+            if (r6 != r1) goto L4c
+            return r1
+        L4c:
+            r5 = r4
+        L4d:
+            v2.c r6 = (v2.AbstractC2103c) r6
+            G2.b r5 = r5.f4633b
+            java.lang.Object r5 = Z0.a.n(r6, r5)
+            return r5
+        */
+        throw new UnsupportedOperationException("Method not decompiled: L2.t.a(boolean, G7.c):java.lang.Object");
+    }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/item_select_episode_0"
+    android:layout_width="@dimen/dp_150"
+    android:layout_height="@dimen/dp_113"
+    android:foreground="@drawable/ripple_thumbnail"
+    android:layout_marginEnd="@dimen/dp_12">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageMovie"
+        android:background="@drawable/placeholder_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <View
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_gradient_episode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:layout_gravity="bottom"
+        android:id="@+id/textEpisode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_12"
+        android:maxLines="1"/>
+    <FrameLayout
+        android:id="@+id/viewSelectEpisode"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:background="@drawable/background_select_episode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_tick_red"/>
+    </FrameLayout>
+</FrameLayout>

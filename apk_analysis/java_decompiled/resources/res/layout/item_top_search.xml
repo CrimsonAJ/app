@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/item_top_search_0"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_112_dot_5"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:foreground="@drawable/ripple_thumbnail">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageMovie"
+        android:background="@drawable/placeholder_poster"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePlay"
+        android:layout_width="@dimen/dp_38"
+        android:layout_height="@dimen/dp_38"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMovie"
+        app:layout_constraintEnd_toEndOf="@+id/imageMovie"
+        app:layout_constraintStart_toStartOf="@+id/imageMovie"
+        app:layout_constraintTop_toTopOf="@+id/imageMovie"
+        app:srcCompat="@drawable/ic_play_episode"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@+id/textMovieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:maxLines="2"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageMovie"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

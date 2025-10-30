@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/sp_16"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:id="@+id/textServer"
+    android:tag="layout/item_hls_server_0"
+    android:background="@drawable/bg_selected_text"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:layout_marginTop="@dimen/dp_6"/>

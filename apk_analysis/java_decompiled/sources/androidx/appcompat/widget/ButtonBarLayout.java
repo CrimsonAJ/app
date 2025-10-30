@@ -1,0 +1,154 @@
+package androidx.appcompat.widget;
+
+import P.Q;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.LinearLayout;
+import co.notix.R;
+import h.AbstractC1260a;
+import java.util.WeakHashMap;
+
+/* loaded from: classes.dex */
+public class ButtonBarLayout extends LinearLayout {
+
+    /* renamed from: a, reason: collision with root package name */
+    public boolean f9454a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public boolean f9455b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public int f9456c;
+
+    public ButtonBarLayout(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f9456c = -1;
+        int[] iArr = AbstractC1260a.f17814k;
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
+        Q.l(this, context, iArr, attributeSet, obtainStyledAttributes, 0);
+        this.f9454a = obtainStyledAttributes.getBoolean(0, true);
+        obtainStyledAttributes.recycle();
+        if (getOrientation() == 1) {
+            setStacked(this.f9454a);
+        }
+    }
+
+    private void setStacked(boolean z9) {
+        int i9;
+        int i10;
+        if (this.f9455b != z9) {
+            if (!z9 || this.f9454a) {
+                this.f9455b = z9;
+                setOrientation(z9 ? 1 : 0);
+                if (z9) {
+                    i9 = 8388613;
+                } else {
+                    i9 = 80;
+                }
+                setGravity(i9);
+                View findViewById = findViewById(R.id.spacer);
+                if (findViewById != null) {
+                    if (z9) {
+                        i10 = 8;
+                    } else {
+                        i10 = 4;
+                    }
+                    findViewById.setVisibility(i10);
+                }
+                for (int childCount = getChildCount() - 2; childCount >= 0; childCount--) {
+                    bringChildToFront(getChildAt(childCount));
+                }
+            }
+        }
+    }
+
+    @Override // android.widget.LinearLayout, android.view.View
+    public final void onMeasure(int i9, int i10) {
+        int i11;
+        boolean z9;
+        int i12;
+        int size = View.MeasureSpec.getSize(i9);
+        int i13 = 0;
+        if (this.f9454a) {
+            if (size > this.f9456c && this.f9455b) {
+                setStacked(false);
+            }
+            this.f9456c = size;
+        }
+        if (!this.f9455b && View.MeasureSpec.getMode(i9) == 1073741824) {
+            i11 = View.MeasureSpec.makeMeasureSpec(size, Integer.MIN_VALUE);
+            z9 = true;
+        } else {
+            i11 = i9;
+            z9 = false;
+        }
+        super.onMeasure(i11, i10);
+        if (this.f9454a && !this.f9455b && (getMeasuredWidthAndState() & (-16777216)) == 16777216) {
+            setStacked(true);
+            z9 = true;
+        }
+        if (z9) {
+            super.onMeasure(i9, i10);
+        }
+        int childCount = getChildCount();
+        int i14 = 0;
+        while (true) {
+            i12 = -1;
+            if (i14 < childCount) {
+                if (getChildAt(i14).getVisibility() == 0) {
+                    break;
+                } else {
+                    i14++;
+                }
+            } else {
+                i14 = -1;
+                break;
+            }
+        }
+        if (i14 >= 0) {
+            View childAt = getChildAt(i14);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) childAt.getLayoutParams();
+            int measuredHeight = childAt.getMeasuredHeight() + getPaddingTop() + layoutParams.topMargin + layoutParams.bottomMargin;
+            if (this.f9455b) {
+                int i15 = i14 + 1;
+                int childCount2 = getChildCount();
+                while (true) {
+                    if (i15 >= childCount2) {
+                        break;
+                    }
+                    if (getChildAt(i15).getVisibility() == 0) {
+                        i12 = i15;
+                        break;
+                    }
+                    i15++;
+                }
+                if (i12 >= 0) {
+                    i13 = getChildAt(i12).getPaddingTop() + ((int) (getResources().getDisplayMetrics().density * 16.0f)) + measuredHeight;
+                } else {
+                    i13 = measuredHeight;
+                }
+            } else {
+                i13 = getPaddingBottom() + measuredHeight;
+            }
+        }
+        WeakHashMap weakHashMap = Q.f5546a;
+        if (getMinimumHeight() != i13) {
+            setMinimumHeight(i13);
+            if (i10 == 0) {
+                super.onMeasure(i9, i10);
+            }
+        }
+    }
+
+    public void setAllowStacking(boolean z9) {
+        if (this.f9454a != z9) {
+            this.f9454a = z9;
+            if (!z9 && this.f9455b) {
+                setStacked(false);
+            }
+            requestLayout();
+        }
+    }
+}

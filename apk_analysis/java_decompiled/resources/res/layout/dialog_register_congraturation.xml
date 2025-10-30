@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/dialog_register_congraturation_0"
+    android:background="@drawable/background_dialog"
+    android:paddingLeft="@dimen/dp_32"
+    android:paddingRight="@dimen/dp_32"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dp_32">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_180"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_congratulation"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:textColor="@color/colorRed"
+        android:id="@+id/textCongratulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="@string/title_congratulation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:text="@string/message_account_ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCongratulation"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

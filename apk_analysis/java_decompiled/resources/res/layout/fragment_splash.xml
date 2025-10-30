@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/fragment_splash_0"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="@dimen/dp_127"
+        android:layout_height="@dimen/dp_197"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_with_name"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageLoading"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+        app:srcCompat="@drawable/ic_loading_splash"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRetry"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:text="@string/label_try_again"
+        android:layout_marginHorizontal="@dimen/dp_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/GrayButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

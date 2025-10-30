@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="@dimen/sp_16"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:id="@+id/buttonEpisode"
+    android:tag="layout/item_episode_number_0"
+    android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:insetLeft="@dimen/dp_3"
+    android:insetRight="@dimen/dp_3"
+    android:insetTop="@dimen/dp_3"
+    android:insetBottom="@dimen/dp_3"
+    android:backgroundTint="@color/colorButtonInactive"
+    app:cornerRadius="@dimen/dp_10"
+    app:rippleColor="@android:color/transparent"/>
