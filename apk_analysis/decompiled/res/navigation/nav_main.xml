@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_main" app:startDestination="@id/splash"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.anilab.android.ui.splash.SplashFragment" android:id="@id/splash">
+        <action android:id="@id/splashToWelcome" app:destination="@id/welcome" app:popUpTo="@id/nav_main" app:popUpToInclusive="true" />
+        <action android:id="@id/splashToLogin" app:destination="@id/login" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.welcome.WelcomeFragment" android:id="@id/welcome">
+        <action android:id="@id/welcomeToLogin" app:destination="@id/login" />
+        <action android:id="@id/welcomeToHost" app:destination="@id/host" app:popUpTo="@id/nav_main" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.login.LoginFragment" android:id="@id/login">
+        <action android:id="@id/loginToLoginWithEmail" app:destination="@id/loginWithEmail" />
+        <action android:id="@id/loginToRegister" app:destination="@id/register" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.loginWithEmail.LoginWithEmailFragment" android:id="@id/loginWithEmail">
+        <action android:id="@id/loginWithEmailToRegister" app:destination="@id/register" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.register.RegisterFragment" android:id="@id/register">
+        <action android:id="@id/registerToSignIn" app:destination="@id/loginWithEmail" />
+        <action android:id="@id/registerToCongratulation" app:destination="@id/registerCongratulation" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.main.HostFragment" android:id="@id/host">
+        <action android:id="@id/hostToNotification" app:destination="@id/notification" />
+        <action android:id="@id/hostToSpotlight" app:destination="@id/spotlight" />
+        <action android:id="@id/hostToEditProfile" app:destination="@id/editProfile" />
+        <action android:id="@id/hostToMalSync" app:destination="@id/malSync" />
+        <action android:id="@id/hostToPlayerSettings" app:destination="@id/playerSettings" />
+        <action android:id="@id/hostToSecurity" app:destination="@id/security" />
+        <action android:id="@id/hostToHelpCenter" app:destination="@id/helpCenter" />
+        <action android:id="@id/hostToConfirmLogout" app:destination="@id/confirmLogout" />
+        <action android:id="@id/hostToSubtitleSettings" app:destination="@id/settingsSubtitle" />
+    </fragment>
+    <dialog android:name="com.anilab.android.ui.congratulation.CongratulationDialogFragment" android:id="@id/registerCongratulation" />
+    <dialog android:name="com.anilab.android.ui.update.CommonErrorDialogFragment" android:id="@id/commonError">
+        <action android:id="@id/gotoSplash" app:destination="@id/splash" app:popUpTo="@id/nav_main" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.anilab.android.ui.myList.MyListActionBottomSheet" android:id="@id/myListAction">
+        <argument android:name="isPin" android:defaultValue="false" app:argType="boolean" />
+    </dialog>
+    <fragment android:name="com.anilab.android.ui.categoryDetail.MovieListFragment" android:id="@id/spotlight">
+        <argument android:name="shortcut" app:argType="com.anilab.domain.model.Shortcut" app:nullable="false" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.search.SearchFragment" android:id="@id/search">
+        <action android:id="@id/searchToFilter" app:destination="@id/filter" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.notification.NotificationFragment" android:id="@id/notification" />
+    <fragment android:name="com.anilab.android.ui.movieDetail.MovieDetailFragment" android:id="@id/movieDetail">
+        <argument android:name="movie" app:argType="com.anilab.domain.model.Movie" app:nullable="false" />
+        <argument android:name="parentId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="childId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <action android:id="@id/goToComment" app:destination="@id/comment" />
+        <action android:id="@id/goToRating" app:destination="@id/rating" />
+        <action android:id="@id/goToDownload" app:destination="@id/download" />
+        <action android:id="@id/openFullDetail" app:destination="@id/viewMoreDetail" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.editProfile.EditProfileFragment" android:id="@id/editProfile" />
+    <fragment android:name="com.anilab.android.ui.mal.MalSyncFragment" android:id="@id/malSync" />
+    <fragment android:name="com.anilab.android.ui.settings.PlayerSettingsFragment" android:id="@id/playerSettings" />
+    <fragment android:name="com.anilab.android.ui.settings.SubtitleSettingsFragment" android:id="@id/settingsSubtitle" />
+    <fragment android:name="com.anilab.android.ui.filter.FilterFragment" android:id="@id/filter">
+        <action android:id="@id/goToFilterResult" app:destination="@id/filterResult" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.filterResult.FilterResultFragment" android:id="@id/filterResult">
+        <argument android:name="type" app:argType="com.anilab.domain.model.FilterConfig" app:nullable="false" />
+        <argument android:name="status" app:argType="com.anilab.domain.model.FilterConfig" app:nullable="false" />
+        <argument android:name="order" app:argType="com.anilab.domain.model.FilterConfig" app:nullable="false" />
+        <argument android:name="genres" app:argType="com.anilab.domain.model.Genre[]" app:nullable="false" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.comment.CommentListFragment" android:id="@id/comment">
+        <argument android:name="parentId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="childId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.security.SecurityFragment" android:id="@id/security">
+        <action android:id="@id/securityToChangePassword" app:destination="@id/changePassword" />
+    </fragment>
+    <fragment android:name="com.anilab.android.ui.changePassword.ChangePasswordFragment" android:id="@id/changePassword" />
+    <fragment android:name="com.anilab.android.ui.helpCenter.HelpCenterFragment" android:id="@id/helpCenter" />
+    <fragment android:name="com.anilab.android.ui.update.UpdateFragment" android:id="@id/updateFragment">
+        <argument android:name="version" app:argType="com.anilab.domain.model.LatestVersion" app:nullable="false" />
+    </fragment>
+    <dialog android:name="com.anilab.android.ui.rating.BottomSheetRating" android:id="@id/rating">
+        <argument android:name="movie" app:argType="com.anilab.domain.model.Movie" app:nullable="false" />
+    </dialog>
+    <dialog android:name="com.anilab.android.ui.logout.BottomSheetConfirmLogout" android:id="@id/confirmLogout" />
+    <dialog android:name="com.anilab.android.ui.download.DownloadFragment" android:id="@id/download">
+        <argument android:name="movie" app:argType="com.anilab.domain.model.Movie" app:nullable="false" />
+        <action android:id="@id/goToSelectSubtitle" app:destination="@id/selectSubtitle" />
+    </dialog>
+    <dialog android:name="com.anilab.android.ui.selectSubtitle.BottomSheetSelectSubtitle" android:id="@id/selectSubtitle">
+        <argument android:name="movieDownload" app:argType="com.anilab.domain.model.MovieDownload" app:nullable="false" />
+    </dialog>
+    <dialog android:name="com.anilab.android.ui.movieDetail.FullDetailDialog" android:id="@id/viewMoreDetail">
+        <argument android:name="full_detail" app:argType="string" app:nullable="false" />
+    </dialog>
+    <dialog android:name="com.anilab.android.ui.external_player.SelectPlayerFragment" android:id="@id/selectPlayer" />
+    <dialog android:name="com.anilab.android.ui.external_player.SelectSubtitleForPlayerFragment" android:id="@id/selectSubtitleForPlayer" />
+    <action android:id="@id/goToSelectPlayer" app:destination="@id/selectPlayer" />
+    <action android:id="@id/goToSelectSubtitleForPlayer" app:destination="@id/selectSubtitleForPlayer" />
+    <action android:id="@id/goToSearch" app:destination="@id/search" />
+    <action android:id="@id/goToDetail" app:destination="@id/movieDetail" />
+    <action android:id="@id/goToHost" app:destination="@id/host" app:popUpTo="@id/nav_main" app:popUpToInclusive="true" />
+    <action android:id="@id/goToLogin" app:destination="@id/login" />
+    <action android:id="@id/gotoUpdate" app:destination="@id/updateFragment" app:popUpTo="@id/nav_main" app:popUpToInclusive="true" />
+    <action android:id="@id/showCommonError" app:destination="@id/commonError" />
+    <action android:id="@id/showMyListAction" app:destination="@id/myListAction" />
+</navigation>

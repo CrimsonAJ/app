@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_avatar_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/imageAvatar" android:background="@color/colorButtonGray" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:layout_constraintDimensionRatio="1:1" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

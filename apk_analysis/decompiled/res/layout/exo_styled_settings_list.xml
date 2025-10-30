@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="end" android:background="@color/colorButtonOutline" android:layout_width="@dimen/dp_372" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/sp_20" android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="start|center" android:layout_gravity="end" android:id="@id/textLabel" android:layout_width="@dimen/dp_280" android:layout_height="@dimen/dp_30" android:layout_marginTop="@dimen/dp_24" android:layout_marginBottom="@dimen/dp_24" android:text="@string/label_subtitle" android:layout_marginEnd="@dimen/dp_68" android:layout_marginVertical="@dimen/dp_24" />
+    <ImageView android:layout_gravity="end" android:id="@id/imageSettings" android:padding="@dimen/dp_6" android:visibility="gone" android:layout_width="@dimen/dp_44" android:layout_height="@dimen/dp_44" android:layout_marginTop="@dimen/dp_16" android:foreground="@drawable/ripple_circle" android:src="@drawable/ic_settings" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/dp_24" />
+    <View android:layout_gravity="start" android:id="@id/imageClose" android:background="@color/colorMaskDark" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/dp_372" />
+    <androidx.recyclerview.widget.RecyclerView android:scrollbarSize="@dimen/dp_2" android:layout_gravity="end" android:id="@id/exo_settings_listview" android:paddingBottom="@dimen/dp_32" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="@dimen/dp_324" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_72" android:layout_marginEnd="@dimen/dp_24" />
+</FrameLayout>

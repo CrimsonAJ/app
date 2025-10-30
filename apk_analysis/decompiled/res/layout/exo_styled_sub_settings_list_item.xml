@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_50" android:layout_marginTop="@dimen/dp_6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/exo_check" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srcCompat="@drawable/bg_exo_check" />
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/colorWhite" android:gravity="start|center" android:layout_gravity="center" android:id="@id/exo_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>
